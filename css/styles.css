@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,300&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    transition: 0.5s;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #a4f5e3;
+}
+
+.calculator {
+    background-color: #fff;
+    width: 350px;
+    height: 670px;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.calculator.active {
+    background: rgb(46, 57, 81);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+
+.result-bar.active {
+    background: rgb(33, 43, 65);
+    transition: 0.5s;
+    color: #fff;
+    border-radius: 30px 30px 0 0;
+}
+
+#result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    font-size: 70px;
+    font-weight: bold;
+    padding-top: 100px;
+    right: 20px;
+    
+}
+
+input {
+    position: relative;
+    height: 85px;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 33px;
+    color: #000;
+    border: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+input.active {
+    color: #06d6a0;
+    transition: 0.5s;
+}
+
+
+
+#equal {
+    position: relative;
+    background-color: #06d6a0;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    left: 13px;
+    top: 13px;
+    grid-column-end: -1;
+}
+
+#equal.active{
+    color:#000;
+}
+
+#cero.active{
+    color:#fff;
+}
+#one.active{
+    color:#fff;
+}
+#two.active{
+    color:#fff;
+}
+#three.active{
+    color:#fff;
+}
+#four.active{
+    color:#fff;
+}
+#five.active{
+    color:#fff;
+}
+#six.active{
+    color:#fff;
+}
+#seven.active{
+    color:#fff;
+}
+#eight.active{
+    color:#fff;
+}
+#nine.active{
+    color:#fff;
+}
+
+.color-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: 12px;
+    top: 20px;
+    width: 70px;
+    font-size: 13px;
+}
+
+.color-buttons .red {
+    color: #f72585;
+}
+
+.color-buttons .yellow {
+    color: #ffd60a;
+}
+
+.color-buttons .green {
+    color: #06d6a0;
+}
+
+.toggle {
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 25px;
+    border-radius: 160px;
+    background: rgb(231, 231, 231);
+    border: 1px solid rgb(214, 214, 214);
+    left: 270px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+.indicator{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    transform: scale(0.9);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.5s;
+}
+
+.toggle.active .indicator{
+    left: 30px;
+}
+
+.toggle.active {
+    background: #06d6a0;
+    border: none;
+}
